@@ -22,3 +22,8 @@ route::get('/home', function() {
         'var1' => "contenu 1"
     ]);
 });
+route::get('/about', function() {
+    return view('about',[
+        'var1' => "contenu 1"
+    ]);
+});
