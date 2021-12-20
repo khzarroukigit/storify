@@ -22,3 +22,6 @@ Route::get('/about', 'App\Http\Controllers\TestsController@two');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::middleware(['auth'])->group( function (){
+    Route::get('/stories', 'App\Http\Controllers\StoriesController@index');
+});
