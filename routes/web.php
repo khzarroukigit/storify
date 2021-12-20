@@ -17,13 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/home', function() {
-    return view('home',[
-        'var1' => "contenu 1"
-    ]);
-});
-route::get('/about', function() {
-    return view('about',[
-        'var1' => "contenu 1"
-    ]);
-});
+Route::get('/home', 'App\Http\Controllers\TestsController@one');
+Route::get('/about', 'App\Http\Controllers\TestsController@two');
