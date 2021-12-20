@@ -41,4 +41,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function stories(){
+        return $this->hasMany(\App\Models\Story::class);
+    }
 }
